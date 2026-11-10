@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Office RAG Assistant</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+    <script src="{% static 'js/chat.js' %}" defer></script>
+
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <div class="header">
+        <div>
+          <h2>Office RAG Assistant</h2>
+          <p>Ask questions about your documents</p>
+        </div>
+
+        <button class="clear-btn" id="clearBtn">Clear Chat</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="welcome" id="welcome">
+          <h3>Welcome to your RAG Assistant!</h3>
+          <p>Ask me anything about your uploaded documents.</p>
+        </div>
+      </div>
+
+      <form class="input-area" id="chatForm">
+        {% csrf_token %}
+
+        <textarea
+          id="questionInput"
+          placeholder="Ask a question..."
+          rows="1"
+          required
+        ></textarea>
+
+        <button type="submit" class="send-btn" id="sendBtn">Send</button>
+      </form>
+    </div>
+
+  </body>
+</html>
