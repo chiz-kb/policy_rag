@@ -1,5 +1,5 @@
 *.log
 *.sql
-*.sqlite
+.docs/chroma/db.sqlite3
 .env
 .docs/Remotly_Piloted_Aircraft_System_RP.pdf
