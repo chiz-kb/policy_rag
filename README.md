@@ -62,7 +62,7 @@ The application allows users to ask questions about office documents and receive
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/office-rag.git
+git clone https://github.com/chiz-kb/office-rag.git
 cd office-rag
 ```
 
